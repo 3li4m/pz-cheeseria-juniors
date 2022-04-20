@@ -3,15 +3,20 @@ import { useQuery } from 'react-query';
 // Components
 import Item from './Cart/Item/Item';
 import Cart from './Cart/Cart';
+
 import Drawer from '@material-ui/core/Drawer';
 import LinearProgress from '@material-ui/core/LinearProgress';
 import Grid from '@material-ui/core/Grid';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import RestoreIcon from '@material-ui/icons/Restore';
 import Badge from '@material-ui/core/Badge';
+
 // Styles
 import { Wrapper, StyledButton, StyledAppBar, HeaderTypography } from './App.styles';
 import { AppBar, Toolbar, Typography } from '@material-ui/core';
+import { BrowserRouter, Link } from 'react-router-dom';
+
+
 // Types
 export type CartItemType = {
   id: number;
@@ -73,7 +78,7 @@ const App = () => {
   if (error) return <div>Something went wrong ...</div>;
 
   return (
-
+    <div>      
     <Wrapper>
       <StyledAppBar position="static">
         <Toolbar>
@@ -127,7 +132,7 @@ const App = () => {
         ))}
       </Grid>
     </Wrapper>
-
+    </div>
   );
 };
 
